@@ -7,13 +7,6 @@
 #     how to setup input/output and how to use dictionaries in the train loop. from karpathy's min-char-rnn.py
 #     how to write the backprop loop a bit more elegantly than what i started with. from eli bendersky's blog
 
-
-# could we convert the onehot vectors into a binary rep?
-# no, the issue with using a binary encoding versus using a onehot encoding is that
-# two elements that have vastly different features may end up sharing features
-# in the binary encoding. so when weights are updated for one class, the weight
-# on the shared feature is reinforced for both classes. (from an SO answer)
-
 import tensorflow as tf
 import math as m
 
