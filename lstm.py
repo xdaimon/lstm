@@ -137,7 +137,6 @@ while cost_ > 1.:
             cost += -tf.log(cp[label])
             ci = int(tf.argmax(cp))
             print(i2c[ci], end='')
-        # smooth loss idea from karpathy
         cost_ = .8*cost_ + .2*cost.numpy()[0]
         print('   : ',cost_)
 
@@ -152,7 +151,6 @@ while cost_ > 1.:
     Wf -= eta * dWf
     Wi -= eta * dWi
     step += 1
-
 
 
 # how much time does sampling the network take?
